@@ -4,9 +4,13 @@ import { RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [LayoutComponent, HeaderComponent, FooterComponent],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, 
+    RouterModule,
+    MatMenuModule
+  ],
+
 })
 export class UiModule {}

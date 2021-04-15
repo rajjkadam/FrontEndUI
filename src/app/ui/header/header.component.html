@@ -1,30 +1,37 @@
 <!-- You can change the values `dark` here with any of the following: -->
 <!-- dark, light, primary, secondary, success, info, danger, warning -->
-<nav class="navbar navbar-dark bg-dark">
-  <!-- This is the application title with a link to the root -->
-  <a class="navbar-brand" routerLinkActive="active" routerLink="/">
-    <img
-      src="assets/logo.svg"
-      height="30"
-      class="d-inline-block align-top"
-      alt="Angular Starters Logo"
-      loading="lazy"
-    />
 
-    Angular Bootstrap</a
-  >
-  <!-- This is a spacer so the links move to the end -->
-  <div class="mr-auto"></div>
-  <!-- This main navigation links are defined here -->
-  <div class="navbar-expand">
-    <div class="navbar-nav">
-      <!-- Each link has the routerLink property set to a different route -->
-      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/home"
-        >Home</a
-      >
-      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/about"
-        >About</a
-      >
-    </div>
+<nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav navbar-light border-bottom">
+  <!-- SideNav slide-out button -->
+  <div class="float-left">
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
   </div>
+  <!-- Breadcrumb-->
+  <div class="breadcrumb-dn mr-auto">
+    <b class="fa flex-auto border-lime bold m-2">StarBuck</b>  
+  </div>
+  <ul class="nav navbar-nav nav-flex-icons ml-auto navbar-light">
+      <li class="nav-item">
+        <a class="nav-link"> <i class="fa fa-search"></i><span class="clearfix d-none d-md-inline-block">Search</span></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link"><i class="fa fa-envelope"></i> <span class="clearfix d-none d-md-inline-block">Contact</span></a>
+      </li>
+      <li class="nav-item">
+        
+          <a class="nav-link"><i class="fa fa-cart-arrow-down"></i> <span class="clearfix d-none d-md-inline-block">Cart</span></a>
+      </li>
+      <li class="nav-item">
+        
+    </li>
+      <li class="nav-item dropdown text-end" mat-button [matMenuTriggerFor]="menu">
+        <a class="nav-link"><i class="fa fa-user"></i> <span  class="clearfix d-none d-md-inline-block">User</span></a>
+        <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button> -->
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Profile</button>
+          <button mat-menu-item>Orders</button>
+          <button mat-menu-item>Logout</button>
+        </mat-menu>
+      </li>
+  </ul>
 </nav>
