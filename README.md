@@ -9,7 +9,7 @@
 Run the following commands to download and install this starter:
 
 ```bash
-git clone git@github.com:angular-starters/angular-bootstrap-starter.git
+https://github.com/rajjkadam/FrontEndUI.git
 cd angular-bootstrap-starter
 npm install
 ```
