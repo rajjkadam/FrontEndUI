@@ -8,10 +8,10 @@ import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
+  }
 
-}
